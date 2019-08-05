@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loan calculator</title>
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="asset/css/main.css" />
+</head>
+
+<body class="bg-dark d-flex justify-content-center">
+
+    <main>
+        <div class="card" id="card">
+            <div class="card-header">
+                <h1>
+                    ماشین حساب محاسبه وام
+                </h1>
+            </div>
+            <div class="card-body">
+                <form action="index.php">
+                    <div class="alert alert-danger text-center none-display">مبلغ دریافتی وام به تومان نمیتواند خالی باشد</div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="number" class="form-control" id="price-get-loan"
+                            placeholder="مبلغ دریافتی وام به تومان"></input>
+                    </div>
+                    <div class="alert alert-danger text-center mt-4 none-display">میزان سود وام نمیتواند خالی باشد</div>
+                    <div class="input-group mt-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">%</span>
+                        </div>
+                        <input type="number" class="form-control" id="price-Profit-loan"
+                            placeholder="میزان سود وام"></input>
+                    </div>
+                    <div class="alert alert-danger text-center mt-4 none-display">چند ماهه؟ نمیتواند خالی باشد</div>
+                    <input type="number" class="form-control mt-4" id="Profit-set-loan" placeholder="چند ماهه؟" />
+
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-dark btn-block mt-3" id="btn-get-sum">محاسبه</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer">
+                <div class="none-display" id="loaders">
+                    <div class="d-flex justify-content-center">
+                        <img src="asset/image/loading.jpg" alt="image loading">
+                        <br><br>
+                    </div>
+                </div>
+                <div id="div-show" class="none-display">
+                    <h2 class="text-center display-4">نتیجه</h2>
+                    <div class="input-group mt-4">
+                        <div class="input-group-prepend btn-block rtl">
+                            <span class="input-group-text">مبلغ پرداخت ماهیانه</span>
+                            <div class="form-control alert-secondary text-center">
+                                <span id="getter-1"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group mt-4">
+                        <div class="input-group-prepend btn-block rtl">
+                            <span class="input-group-text">مبلغ کل سود</span>
+                            <div class="form-control alert-secondary text-center">
+                                <span id="getter-2"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group mt-4">
+                        <div class="input-group-prepend btn-block rtl">
+                            <span class="input-group-text">مبلغ پرداختی وام با سود</span>
+                            <div class="form-control alert-secondary text-center">
+                                <span id="getter-3"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="asset/js/script.js"></script>
+</body>
+
+</html>

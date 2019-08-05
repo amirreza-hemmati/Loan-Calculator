@@ -1,0 +1,45 @@
+body{
+    width: 100%;
+    height: 100vh;
+    padding-top: 75px;
+}
+
+.card-header{
+    padding: 0 80px;
+}
+
+input[type = number]::placeholder{
+    text-align: center;
+    direction: rtl; 
+}
+
+.rtl{
+    direction: rtl;
+}
+
+.ltr{
+    direction: ltr;
+}
+
+.border-left{
+    border-left: 1px solid black;
+}
+
+.none-display{
+    display:none
+}
+
+img{
+    width: 145px;
+    height: 158px;
+    animation: loaders 2.5s infinite;
+}
+
+@keyframes loaders{
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
